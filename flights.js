@@ -47,7 +47,8 @@ const flightsfile = [
         "arrivalDate": "jan 03, 2024",
         "arrivalTime": "06:00, 07:00, 08:00",
         "status": "17000ks Nomal , 35000ks VIP",
-        "duration": "11h 00m"
+        "duration": "11h 00m",
+        "bus":"https://raw.githubusercontent.com/Master-Anku/Bus/main/Bus%20photo/mandala.jpg"
     },
     {
         "departureIATA": "MDY",

@@ -54,6 +54,8 @@ const airports = [
         "type": "airport",
         "lat": "25.07639",
         "size": "large"
+      
+       
     },
     {
         "iata": "MDY",

@@ -67,12 +67,16 @@ function checkFlight() {
     <p class="subTitle">Arrival Date: <span class="details">${flight.arrivalDate}</span></p>
     <p class="subTitle">Status: <span class="details">${flight.status}</span></p>
     <p class="subTitle">Duration: <span class="details">${flight.duration}</span></p>
+    <p class="subTitle">Duration: <span class="details">${flight.bus}</span></p>
     `;
   } 
   else {
     showResult.innerHTML = "Flight details NOT found!တစ်ခုခုကို ရွေးချယ်ပေးပါ";
   }
 }
+
+// var imgUrl =document.querySelector("#img-url");
+// imgUrl.innerHTML = "[flights.bus]"
 
 document.addEventListener("DOMContentLoaded", () => {
   htmlOption();
