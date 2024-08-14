@@ -27,14 +27,14 @@ function htmlOption() {
   //   option.textContent = `${ap.name} (${ap.iata})`;
   //   departure.appendChild(option);
   //   arrival.appendChild(option.cloneNode(true));
-  
+
   // });
 
-  airports.forEach((ap) =>{
+  airports.forEach((ap) => {
     let optionAp = `<option value="${ap.iata}" > ${ap.name} (${ap.iata})></option>`;
     departure.insertAdjacentHTML("beforeend", optionAp);
     arrival.insertAdjacentHTML("beforeend", optionAp);
-  })
+  });
 }
 
 function checkFlight() {
@@ -51,7 +51,9 @@ function checkFlight() {
   //   return;
   // }
 
-  let flight = flightsfile.find((f) => f.departureIATA === departureIATA && f.arrivalIATA === arrivalIATA);
+  let flight = flightsfile.find(
+    (f) => f.departureIATA === departureIATA && f.arrivalIATA === arrivalIATA
+  );
 
   let departureAp = airports.find((a) => a.iata === departureIATA);
   let arrivalAp = airports.find((a) => a.iata === arrivalIATA);
@@ -67,9 +69,10 @@ function checkFlight() {
     <p class="subTitle">Arrival Date: <span class="details">${flight.arrivalDate}</span></p>
     <p class="subTitle">Status: <span class="details">${flight.status}</span></p>
     <p class="subTitle">Duration: <span class="details">${flight.duration}</span></p>
-    <p class="subTitle">Duration: <span class="details">${flight.bus}</span></p>
+    <img width=350px src='${flight.bus}'/>
     `;
-  } 
+  }
+  // You have to change to imag tag for images ****
   else {
     showResult.innerHTML = "Flight details NOT found!တစ်ခုခုကို ရွေးချယ်ပေးပါ";
   }
@@ -83,5 +86,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // checkFlight();
   document.querySelector("#checkStatus").addEventListener("click", checkFlight);
 });
-
-
